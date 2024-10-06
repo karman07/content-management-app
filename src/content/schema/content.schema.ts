@@ -12,10 +12,10 @@ export class Content {
   body: string;
 
   @Prop({ required: true })
-  userId: string;  // Store the user ID of the content creator
+  userId: string;  
 
   @Prop({ required: true })
-  username: string;  // Store the username of the content creator
+  username: string;  
 
   @Prop()
   createdAt?: Date;

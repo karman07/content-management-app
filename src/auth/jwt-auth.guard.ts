@@ -11,15 +11,15 @@ export class JwtAuthGuard implements CanActivate {
     const token = request.headers.authorization?.split(' ')[1];
 
     if (!token) {
-      return false; // No token provided
+      return false; 
     }
 
     try {
       const user = this.jwtService.verify(token);
-      request.user = user; // Attach user info to request
+      request.user = user; 
       return true;
     } catch (error) {
-      return false; // Invalid token
+      return false; 
     }
   }
 }
